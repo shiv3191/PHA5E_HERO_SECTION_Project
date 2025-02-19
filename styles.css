@@ -1,0 +1,144 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing:content-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #111;
+    color: #fff;
+    text-align: center;
+    overflow:hidden;
+}
+
+
+.splash-screen {
+    position:fixed;
+    padding-left: 500px;
+    padding-right: 580px;
+    padding-top: 250px;
+    padding-bottom: 500px;    
+}
+
+.splash-text {
+    font-size: 4rem;
+    font-weight: bold;
+    color: #fff;
+
+}
+
+
+.hero {
+    
+   height: 90%;
+    display: flex;
+    padding: 3%;
+    visibility: hidden;
+    transition: opacity 0.4 , visibility 0.5s  ;
+}
+
+.hero.visible {
+    opacity: 1;
+    visibility: visible;
+}
+
+.hero-column {
+    padding-top: 200px;
+    padding-right: 200px;
+}
+
+.title {
+   font-size: 300%;
+    font-weight: bold;
+}
+
+.subtitle {
+    font-size: 150%;
+
+}
+
+.image-container {
+    
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    height: 100%;
+    flex-wrap: wrap;
+}
+
+.image-box {
+    position: relative;
+    padding-top: 80px;
+}
+
+.hero-img  {
+    width: 260px;
+    transition: transform 0.4s ease-out, opacity 0.3s ease, filter 0.3s ease;
+    filter: grayscale(100%);
+    opacity: 0.5;
+    border-radius: 10px;
+}
+
+.hero-img:hover {
+    filter: grayscale(0%);
+    opacity: 1;
+}
+
+.image-text {
+    display:grid;
+    font-family: 'Oswald', sans-serif;
+
+    font-weight: bolder;
+    position: relative;
+    color: white;
+    font-size: 14px;
+    border-radius: 5px;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.image-box:hover .image-text {
+    opacity: 1;
+}
+
+@media screen and (max-width: 768px) {
+    .hero-column {
+        flex: 1 1 100%;
+        text-align: center;
+    }
+
+    .title {
+        font-size: 2.5rem;
+    }
+
+    .subtitle {
+        font-size: 1.2rem;
+    }
+
+    .image-container {
+        flex: 1 1 100%;
+    }
+
+    .hero-img {
+        width: 200px;
+    }
+
+    .image-text {
+        font-size: 10px;
+        padding: 4px 8px;
+    }
+}
+
+#image1{
+    padding-right: 5px;
+}
+#image3{
+    padding-bottom: 50px;
+}
+
+
+#t3{
+    padding-bottom: 50px;
+}
